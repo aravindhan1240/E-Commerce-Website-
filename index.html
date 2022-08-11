@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online!  </title>
+    <link rel="stylesheet" href="inner.css">
+    <script src="https://kit.fontawesome.com/9c57adf6a4.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <div class="navbar-fixed-top" >
+        <nav class="navbar navbar-expand-lg navbar-style navbar-fixed-top" id="navbar" style=" position:fixed;">
+            <b class="navbar-brand" style="margin-left:30px ;">OFFER ONLINE SHOPPING</b>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <i class="bi bi-list" id="menu7"></i>
+            </button>
+              
+                <div class="collapse navbar-collapse" id="menu" style="margin-right:30px ;">
+                  <form action="" class="form-group">
+                    <input type="Scearch" class="form-control" placeholder="Search Porduts" id="input_search">
+                  </form>
+        
+        <div class="navbar-nav ms-auto "id="mybutton">
+            <button class="nav-item btn active" onclick="searchFilter('Home')">Home</button>
+            <button class="nav-item btn" onclick="searchFilter('Shirt')">Shirt</button>
+            <button class="nav-item btn" onclick="searchFilter('Mobile')">Mobile</button>
+            <button class="nav-item btn" onclick="searchFilter('Watch')">Watch</button>
+            <button class="nav-item btn" onclick="searchFilter('Suit')">Coat Suit</button>
+       </div>
+	   <div class="btn">
+        <button><a href="#"><i class="fa-solid fa-cart-shopping" style="color: rgb(2, 2, 2);"></i></a></button>
+       </div>
+</nav>
+    <div class="container-fluid porduts">
+        <div class="filterPro Shirt">
+            <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1565027101-screen-shot-2018-05-16-at-12-05-25-pm-1526497539.png" alt="">
+             <p>Checked Shirt Color Red</p>
+               <div class="icon"> 
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half"></i>
+              </div>
+             <span class="id">$899</span>
+             <span>$500</span><br>
+             <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://www.pngall.com/wp-content/uploads/1/Coat-PNG-Photo.png" alt="">
+
+           <p>Black Suit For Mens </p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+           <span class="id">$1999</span>
+           <span>$1000.9</span><br>
+           <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Shirt">
+            <img src="https://freepngimg.com/save/12846-dress-shirt-png-hd/480x480" alt="">
+            
+            <p>Parx Shrit Blue Casuals For Men</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$99</span>
+            <span>$89.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Mobile">
+            <img src="https://printmoreindia.in/files/images/prdct/bWFpbi8xNjEyNzY0MzI5LTU3MzA1MzY3NTMucG5n.png" alt="">
+            <p>OPPO F15 Mobile Black_Color</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$1000.9</span>
+            <span>$999</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        
+        <div class="filterPro Watch">
+        <img src="data:image/jpeg;base64,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" alt="">
+            <p>Apple Smart Watch Series 5</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000.9</span>
+            <span>$1000.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://pngimg.com/uploads/suit/small/suit_PNG93227.png" alt="">
+
+           <p>Coat Suit For Men Brown _Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$200.9</span>
+          <span>$100</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Mobile">
+            <img src="https://www.91-cdn.com/pricebaba-blogimages/wp-content/uploads/2020/10/Oppo-F17-Pro-Diwali-Edition.png" alt="">
+           
+            <p>OPPO F17Pro Mobile</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2100</span>
+            <span>$1300</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Shirt">
+            <img src="https://www.seekpng.com/png/detail/60-600995_formal-shirts-for-men-png-free-download-men.png" alt="">
+            
+            <p>Formal Shirt For Men White line</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$200</span>
+            <span>$90</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Watch">
+            <img src="https://target.scene7.com/is/image/Target/GUEST_96194caa-c8c9-4d0a-91b4-5a9fb7c9f457?wid=488&hei=488&fmt=pjpeg" alt="">
+            <p>Apple Wacth Series_6 GPS</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000.9</span>
+            <span>$900.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Mobile">
+            <img src="https://s3b.cashify.in/gpro/uploads/2020/07/21063517/poco-m2-pro-front.png" alt="">
+            <p>POCO M2 Pro Mobile Phone</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$4000</span>
+            <span>$2000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://png.pngitem.com/pimgs/s/532-5322079_captain-america-made-suits-3-piece-suits-made.png" alt="">
+
+           <p>Coat Suit For Men Black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$300</span>
+          <span>$100</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Shirt">
+            <img src="https://freepngimg.com/thumb/dress%20shirt/38-white-dress-shirt-png-image-thumb.png" alt="">
+            <p>White Formal Shirt  For Men </p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$200.9</span>
+            <span>$170.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Watch">
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MKUQ3_VW_PF+watch-45-alum-midnight-nc-7s_VW_PF_WF_CO?wid=1400&hei=1400&trim=1,0&fmt=p-jpg&qlt=95&.v=1632171068000,1631661680000" alt="">
+            <p>Apple Watch Series 7 GPS,45mm</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000.9</span>
+            <span>$1000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Mobile ">
+            <img src="https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1615279921/Croma%20Assets/Communication/Mobiles/Images/233065_p67ul3.png/mxw_640,f_auto" alt="">
+            <p>Buy Oppo F19 Pro Mobile Phone</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$1009</span>
+            <span>$1040</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://png.pngitem.com/pimgs/s/512-5124848_the-teller-made-suits-singapore-guabello-suit-suit.png" alt="">
+
+           <p>Coat Suit For Men Black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$500</span>
+          <span>$300</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Shirt">
+            <img src="https://freepngimg.com/thumb/dress_shirt/7-2-dress-shirt-png-hd-thumb.png" alt="">
+            <p>White Color Men Dress Shirt</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$200</span>
+            <span>$10.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Watch">
+            <img src="https://i02.appmifile.com/246_operator_in/13/05/2021/fdc177eb158a99179e6b649d6aff2b75.png" alt="">
+            <p>Redmi Smart Wacth Mi-India</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$20000</span>
+            <span>$1000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Mobile">
+            <img src="https://s3b.cashify.in/gpro/uploads/2021/08/20045936/vivo-y21-2021-front-1.png" alt="">
+            <P>Vivo Y21 Mobile Phone</P>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$5000</span>
+            <span>$4000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://p.kindpng.com/picc/s/762-7628418_tailor-made-suits-tuxedo-hd-png-download.png" alt="">
+
+           <p>Coat Suit For Men Black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$20</span>
+            <span>$10.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Shirt">
+            <img src="https://www.pngmart.com/files/8/Dress-Shirt-PNG-Background.png" alt="">
+            <p>Transpaarent Light green Shirt</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$200</span>
+            <span>$109</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Watch">
+            <img src="https://www.91-cdn.com/hub/wp-content/uploads/2022/01/Crossbeats-Ignite-S3.png?tr=q-100" alt="">
+            <p>Redmi Smart 2Pro Watch GPS</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$3000.9</span>
+            <span>$1900</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Mobile">
+            <img src="https://gadgetsleo.com/wp-content/uploads/2022/02/Vivo-V23-5G-Sunshine-Gold.jpg" alt="">
+            <p>Vivo V23 5G Mobile Phone</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000.9</span>
+            <span>$1000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+            
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_a_1_ShznLhj1HOS7FstmVMysaQehKUG09YAaLetGIQrK8Gq6GTsATGd1MlmIkGNC8Q8&usqp=CAU" alt="">
+
+           <p>Coat Suit light black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$200</span>
+          <span>$19.9</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Watch">
+            <img src="https://image01.realme.net/general/20210604/1622779355361.png" alt="">
+            <p>Realme Watch S-realme India </p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$20000</span>
+            <span>$10000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+          </div>
+        <div class="filterPro Shirt">
+            <img src="https://rukminim2.flixcart.com/image/432/518/kxdl3m80/fabric/b/g/p/no-2-25-m-unstitched-na-2330-sat-shree-fab-original-imag9ugbyrpnhh4g.jpeg?q=70" alt="">
+            <p>Majesitic White bule Shirt</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$600</span>
+            <span>$100</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Mobile">
+            <img src="https://asia-exstatic-vivofs.vivo.com/PSee2l50xoirPK7y/1623392255662/520535a663956a9d42ada18ea93e3acb.png" alt="">
+            <p>Vivo Mobile Phone</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000.9</span>
+            <span>$1000.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWDT4YPKeZ4ZeYPIS1thPGMMB_Ot1fATf5NfmbI4vUygq3ohUzVD9sa8GeK6cb5jWciCc&usqp=CAU" alt="">
+
+           <p>Coat Suit For Men Black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$1000</span>
+          <span>$100</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Watch">
+            <img src="https://image05.realme.net/general/20210615/1623731204611.png" alt="">
+            <p>Realme Wacth 2 black color</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$30000</span>
+            <span>$10000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Shirt">
+            <img src="https://www.kindpng.com/picc/m/117-1171337_dress-png-free-download-transparent-formal-shirt-png.png" alt="">
+            <p>Men Orange and white line  Shirt</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$200</span>
+            <span>$109</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Mobile">
+            <img src="https://www.corning.com/microsites/csm/gorillaglass/Samsung/CGG_Samsun_galaxys21_phantom.jpg" alt="">
+            <p>Galaxy S21 5G Mobile Phone</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000</span>
+            <span>$1009</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Shirt">
+            <img src="https://pngimg.com/uploads/dress_shirt/dress_shirt_PNG8117.png" alt="">
+            <p>Original Men Shrit Black_Color </p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$200</span>
+            <span>$108</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Watch">
+            <img src="https://images.livemint.com/img/2020/06/06/1600x900/p_01_watch-219e697cb3_1591326912314_1591326920215_1591417095804.png" alt="">
+            
+            <p>Realme Watch Smart  GPS 2Pro</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2900</span>
+            <span>$1900</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgFgOdhlI02CdjtestTaJ3umh8OyAIuGlQRMnmBCV8peBGmcLn3DEqLAHrS4qHMYa05kw&usqp=CAU" alt="">
+
+           <p>Coat Suit For Men Black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$2000</span>
+          <span>$1000</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Mobile">
+            <img src="https://www.zdnet.com/a/img/resize/0be9e65356b9e541720ec28ea819e3c08f375f4b/2022/03/17/f16ba3f2-01b5-4cfc-a3ef-787c8bf71033/samsung-galaxy-a53-5g.png?width=1200&fit=bounds&format=pjpg&auto=webp" alt="">
+            <p>Samsung Galaxy A53 5G Phone</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$20000</span>
+            <span>$10009</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Watch">
+            <img src="http://cdn.shopify.com/s/files/1/0564/3006/7870/products/OnePlusBandW101Smartwatch_Black_3_1200x1200.png?v=1633346557" alt="">
+            <p>OnePlus Watch Black_Color </p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000.9</span>
+            <span>$1000.9</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Coat Suit">
+          <img src="https://pngimg.com/uploads/suit/small/suit_PNG8130.png" alt="">
+
+           <p>Coat Suit For Men Black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$200</span>
+          <span>$100</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+        <div class="filterPro Mobile">
+            <img src="https://oasis.opstatics.com/content/dam/oasis/page/2022/operation/feb/0211/nord-ce-2-5g/Blue.png" alt="">
+            <p>OnePlus Nord CE 2 5G Phone</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$2000</span>
+            <span>$1000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Shirt">
+            <img src="https://www.pngmart.com/files/8/Dress-Shirt-PNG-Transparent.png" alt="">
+            <p>white shirt Black border color</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$4000</span>
+            <span>$3000</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>
+        <div class="filterPro Watch">
+            <img src="http://sc04.alicdn.com/kf/H254a6f9fdca541079ff3d7738220a3afj.png" alt="">
+            <p>L12 Fit Bit OnePlus Wacth</p>
+            <div class="icon"> 
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <span class="id">$20000</span>
+            <span>$10009</span><br>
+            <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+        </div>  
+        <div class="filterPro Coat Suit">
+          <img src="https://www.downloadclipart.net/large/suit-png-image.png" alt="">
+           <p>Coat Suit For Men Black_Color</p>
+           <div class="icon"> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half"></i>
+          </div>
+          <span class="id">$209</span>
+          <span>$105</span><br>
+          <button type="submit"class="btn" onclick="myData()">Buy Now</button>
+      </div>
+    </div>
+<footer class=" container-fluid fluid">
+      <div class="footer_socials">
+        <h6>Contact</h6>
+        <code>NAME:</code>Aravindhan P <br>
+        <code>EMAIL:</code>aravindhan.p19@gmail.com<br>
+        <code>PHONE:</code>8220523783<br><br>
+        <h6>Follow Us</h6>
+        <div class="footer_icon">
+          <a href="#" class="footer_icon"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="footer_icon"><i class="fa-brands fa-instagram-square"></i></a>
+          <a href="#" class="footer_icon"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="footer_icon"><i class="fa-brands fa-github"></i></a>
+          <a href="#" class="footer_icon"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+      <div class="about">
+        <h6>About</h6>
+        <a href="">About US</a><br>
+        <a href="">Delivery Information</a><br>
+        <a href="">Privacy Policy</a><br>
+        <a href="">Terms & Conditions</a><br>
+        <a href="">Contact Us</a>
+      </div>
+      <div class="install">
+        <h6>Install App</h6>
+        <p>From App Store Google Play</p>
+        <a href=""><img src="https://www.freepnglogos.com/uploads/play-store-logo-png/play-store-logo-nisi-filters-australia-11.png" alt=""></a><br>
+        <a href=""><img src="https://images.squarespace-cdn.com/content/v1/5cb86c018dfc8ca29e4e4b2b/1585767173618-DQWYTZI9LXP26S4FDUWO/app-store-badge.png" alt=""></a>
+      </div>
+      <p>&#169; 2022  Copyright all right reserved</p>
+  </footer>
+    <script src="inner.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+</html>

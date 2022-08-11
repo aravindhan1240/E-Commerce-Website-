@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background-size: cover;
+    
+}
+.filterPro{
+    width: 250px;
+    height: 410px;
+    margin: 17.5px;
+    display:none;
+    text-align: center;
+    background-color: #ffff;
+    border: 0.5px solid black;
+    
+}
+.filterPro button{
+    margin-top: 2%;
+    border: 1px solid orange;
+    background-color: orange;
+    color: white;
+}
+.filterPro button:hover{
+    background-color: rgb(206, 144, 28);
+}
+    
+.Shirt,.Watch,.Mobile,.Suit
+{
+    box-shadow: 0 10px 25px rgb(0, 0, 0);
+    margin: 40px;
+    margin-top:100px;
+
+}
+.filterPro img{
+    width: 248px;
+    height: 250px;
+    background-color: #fff;
+    
+}
+.show{
+    display: block;
+}
+.container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+button.active{
+    background-color: rgb(147, 208, 228);
+}
+nav{
+    width: 100%;	
+    font-family:sans-serif;
+    background-color: #fff;
+   
+}
+.nav-item{
+	font-family: 'Roboto Slab', serif;
+	font-weight:bold;
+    border: 2px solid transparent;
+    background-color: antiquewhite;
+   }
+.nav-item:hover{
+       border-bottom: 2px solid blue;
+       transition: 1.5s;
+   }
+.navbar-style{
+    box-shadow: 0 5px 15px #efefef ;
+}
+
+.navbar-brand{
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto Slab', serif;
+}
+.form-group input{
+    width: 550px;
+    border-radius: 20px; 
+}
+p{
+    font-weight:bold ;
+    color: rgb(61, 12, 90);
+}
+.icon{
+    color: rgb(104, 79, 33);
+}
+.id{
+    color: red;
+    text-decoration: line-through;
+}
+span{
+    color: green;
+}
+
+
+footer .footer{
+    margin-top: 30px;
+}
+.install img{
+    width: 200px;
+    height: 60px;
+    cursor:pointer;
+}
+.about a{
+    text-decoration:none;
+    color: black;
+}
+
+
+.fluid{
+    background-color: rgb(202, 196, 207);
+}
+.footer_socials{
+    width: 410px;
+    margin-top: 40px;
+}
+.about{
+    margin-top: 40px;
+    width: 410px;
+}
+.install{
+    margin-top: 40px;
+    width: 410px;
+}
+.btn button a{
+    text-decoration: none;
+}
+.btn button{
+    outline: none;
+    border: none;
+    background-color: #fff;
+}
+.btn button:hover{
+    background-color: rgb(147, 208, 228);
+}
+.footer_icon {
+    width: max-content;
+    color: #fff;
+    font-size: 40px;
+}
+.footer_icon :hover{
+ color: crimson;
+}
+
+@media (max-width:768px) {
+   
+    .filterPro img{
+        width: 248px;
+        height: 250px;
+         
+    }
+    .container-fluid{
+        display: flex;
+        justify-content: center;
+    }
+    .form-group{
+        margin-left: 40px;
+    }
+    
+    .footer_socials{
+        width: 100%;
+        margin-left: 100px;
+    }
+    .about{
+        width: 100%;
+        margin-left: 100px;
+    }
+    .install{
+        width: 100%;
+        margin-left: 100px;
+    }
+    .form-group input{
+        width: 100%;
+        border-radius: 2px;
+        padding-left: 10px;  
+    }
+    #mybutton button{
+        margin-left: 40px;
+    }
+   
+}

@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    background-color: #eee;
+    background-image: url(images.jpg);
+    background-size: cover;
+}
+button{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(209, 105, 8);
+    margin-top: 10%;
+    border-radius: 15px;
+    cursor:pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: blue;
+}
+span{
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+}
+h1{
+    color: rgb(212, 57, 83);
+    font-size: 60px;
+}
+h4{
+    color: white;
+    font-size: larger;
+    background-color:black;
+    border-radius: 10px;
+}
+h2{
+    color: rgb(0, 0, 0);
+}
+.form_container{
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 450px;
+}
+.form_container form{
+   
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 25px;
+    
+}
+.form_container form input
+{
+    width: 100%;
+    font-size: 17px;
+    padding: 10px 15px;
+    background-color:#eee;
+    margin: 8px 0;
+  
+    padding-left:20px ;
+    border-radius: 5px;
+}
+.form_container form input::placeholder{
+    color:orange;
+}
+.form_container form select{
+    width: 100%;
+    font-size: 16px;
+    padding: 6px 10px;
+    background-color:rgb(216, 212, 224);
+    margin: 8px 0; 
+}
+select{
+    cursor:pointer;
+}
+.form_container form .error-msg{
+    margin:20px 0;
+    display:block;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.form_container form .form_btn{
+    background-color: lightblue;
+    color:black;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+} 
+.form_container form .form_btn:hover{
+    background-color: blue;
+    color: white;
+    text-transform: uppercase;
+}
+.form_btn{
+    cursor:pointer;
+}
+.form_container h3{
+    font-size: 30px;
+    color: red;
+}
+.form_container form p{
+    font-size: large;
+}
+.form_container form p a{
+    color: red;
+}
+.form_container form p a:hover{
+    color: green;
+}
